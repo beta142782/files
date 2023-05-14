@@ -4,6 +4,7 @@ from pyrogram import filters
 from config import ADMINS, BOT_STATS_TEXT, USER_REPLY_TEXT
 from datetime import datetime
 from helper_func import get_readable_time
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 @Bot.on_message(filters.command('followus') & filters.private)
 async def followus(bot: Bot, message: Message):
@@ -11,13 +12,13 @@ async def followus(bot: Bot, message: Message):
                         [
                          [
                           InlineKeyboardButton('🎬 𝑴𝒐𝒗𝒊𝒆𝒔 𝒈𝒓𝒐𝒖𝒑', url="t.me/+ADvUFRV3nsljNTM1"),
-                          InlineKeyboardButton('🥹 𝓤𝓹𝓭𝓪𝓽𝓮𝓼 𝓒𝓱𝓪𝓷𝓷𝓮𝓵', url="t.me/MoviezAddaKan")
+                          InlineKeyboardButton('🥹 𝑼𝒑𝒅𝒂𝒕𝒆𝒔 𝑪𝒉𝒂𝒏𝒏𝒆𝒍', url="t.me/MoviezAddaKan")
                        ],[
-                          InlineKeyboardButton("🧑‍💻 𝓑𝓸𝓽 𝓞𝔀𝓷𝓮𝓻", url="t.me/")
+                          InlineKeyboardButton("🧑‍💻 𝑩𝒐𝒕 𝑪𝒓𝒆𝒂𝒕𝒆𝒓", url="t.me/")
                          ]
                         ]
                     )
-    await message.reply(f"<b> ⭐ 𝓕𝓸𝓵𝓵𝓸𝔀 𝓤𝓼 𝓒𝓵𝓲𝓬𝓴 𝓑𝓾𝓽𝓽𝓸𝓷𝓼 𝓑𝓮𝓵𝓸𝔀 ⭐</b>\n\n", reply_markup=reply_markup, disable_web_page_preview = True)
+    await message.reply(f"<b> ⭐ ᴄʟɪᴄᴋ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴs ᴛᴏ ᴊᴏɪɴ ᴜꜱ ⭐</b>\n\n", reply_markup=reply_markup, disable_web_page_preview = True)
 
 @Bot.on_message(filters.command('stats') & filters.user(ADMINS))
 async def stats(bot: Bot, message: Message):

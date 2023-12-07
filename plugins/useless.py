@@ -6,7 +6,7 @@ from datetime import datetime
 from helper_func import get_readable_time
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
-@Bot.on_message(filters.command('followus') & filters.private)
+@Bot.on_message(filters.command('join') & filters.private)
 async def followus(bot: Bot, message: Message):
     reply_markup=InlineKeyboardMarkup(
                         [
